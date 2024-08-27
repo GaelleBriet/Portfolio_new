@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nuxt/eslint": "^0.5.3",
+    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "nuxt": "^3.13.0",
     "vue": "latest"
