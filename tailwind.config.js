@@ -6,6 +6,15 @@ export default {
       backgroundImage: {
         darkGradient: 'linear-gradient(180deg, #1A1A1A, #131313)',
       },
+      backgroundSize: {
+        'custom': '100% 200px',
+      },
+      backgroundPosition: {
+        'custom': 'top, bottom',
+      },
+      backgroundRepeat: {
+        'custom': 'no-repeat',
+      },
       colors: {
         basic: {
           black: '#0D0D0D',
