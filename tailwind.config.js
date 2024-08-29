@@ -5,15 +5,13 @@ export default {
     extend: {
       backgroundImage: {
         darkGradient: 'linear-gradient(180deg, #1A1A1A, #131313)',
-      },
-      backgroundSize: {
-        'custom': '100% 200px',
-      },
-      backgroundPosition: {
-        'custom': 'top, bottom',
-      },
-      backgroundRepeat: {
-        'custom': 'no-repeat',
+        customGradient: `
+          radial-gradient(ellipse at top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 60%) no-repeat top center,
+          radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 60%) no-repeat bottom center,
+          linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(63, 100, 233, 0.3) 35%, rgba(151, 71, 255, 0.3) 45%, rgba(233, 63, 63, 0.3) 55%, rgba(255, 184, 0, 0.3) 65%, rgba(255, 255, 255, 1) 100%) no-repeat top center,
+          linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 184, 0, 0.3) 35%, rgba(233, 63, 63, 0.3) 45%, rgba(151, 71, 255, 0.3) 55%, rgba(63, 100, 233, 0.3) 65%, rgba(255, 255, 255, 1) 100%) no-repeat bottom center,
+          white
+        `,
       },
       colors: {
         basic: {
