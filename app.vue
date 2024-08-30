@@ -1,6 +1,30 @@
+<script setup lang="ts">
+const colorMode = useColorMode()
+const isDark = computed({
+  get () {
+    return colorMode.value === 'dark'
+  },
+  set () {
+    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+  }
+})
+</script>
 <template>
-  <div  class="bg-custom-gradient min-h-screen">
+  <div  class="bg-custom-gradient min-h-screen bg-white dark:bg-slate-800">
+    <NavBarComponent />
     <NuxtPage />
+    <ClientOnly>
+      <UButton
+          color="gray"
+          variant="ghost"
+          aria-label="Theme"
+          :label="`Theme actif : ${isDark ? 'dark' : 'light'}`"
+          @click="isDark = !isDark"
+      />
+      <template #fallback>
+        <div class="w-8 h-8" />
+      </template>
+    </ClientOnly>
   </div>
 </template>
 <style scoped>
