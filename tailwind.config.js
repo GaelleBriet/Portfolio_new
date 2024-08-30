@@ -1,17 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./app.vue",
+    "./error.vue",
+  ],
   darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
-        darkGradient: 'linear-gradient(180deg, #1A1A1A, #131313)',
-        customGradient: `
+        lightGradient: `
           radial-gradient(ellipse at top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 60%) no-repeat top center,
           radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 60%) no-repeat bottom center,
           linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(63, 100, 233, 0.3) 35%, rgba(151, 71, 255, 0.3) 45%, rgba(233, 63, 63, 0.3) 55%, rgba(255, 184, 0, 0.3) 65%, rgba(255, 255, 255, 1) 100%) no-repeat top center,
           linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 184, 0, 0.3) 35%, rgba(233, 63, 63, 0.3) 45%, rgba(151, 71, 255, 0.3) 55%, rgba(63, 100, 233, 0.3) 65%, rgba(255, 255, 255, 1) 100%) no-repeat bottom center,
           white
+        `,
+        darkGradient: `
+          radial-gradient(ellipse at top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 60%) no-repeat top center,
+          radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 60%) no-repeat bottom center,
+          linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(63, 100, 233, 0.3) 35%, rgba(151, 71, 255, 0.3) 45%, rgba(233, 63, 63, 0.3) 55%, rgba(255, 184, 0, 0.3) 65%, rgba(0, 0, 0, 1) 100%) no-repeat top center,
+          linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(255, 184, 0, 0.3) 35%, rgba(233, 63, 63, 0.3) 45%, rgba(151, 71, 255, 0.3) 55%, rgba(63, 100, 233, 0.3) 65%, rgba(0, 0, 0, 1) 100%) no-repeat bottom center,
+          black
         `,
       },
       colors: {
@@ -49,10 +62,8 @@ export default {
   plugins: [
     function ({ addUtilities }) {
       addUtilities({
-        '.text-dark-gradient': {
-          background: 'linear-gradient(180deg, #1A1A1A, #131313)',
-          '-webkit-background-clip': 'text',
-          '-webkit-text-fill-color': 'transparent',
+        '.bg-lightGradient': {
+          backgroundImage: 'lightGradient',
         },
       });
     },
