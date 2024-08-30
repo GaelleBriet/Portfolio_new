@@ -6,6 +6,10 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/eslint',
     '@nuxtjs/i18n',
-    '@nuxt/icon'
-  ]
+    '@nuxt/icon',
+    '@nuxt/ui'
+  ],
+  colorMode: {
+    preference: 'system'
+  }
 })
