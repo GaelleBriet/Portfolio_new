@@ -3,7 +3,6 @@ const isDark = ref(false);
 
 const onThemeChange = (darkMode: boolean) => {
   isDark.value = darkMode;
-  console.log(isDark.value);
 };
 </script>
 

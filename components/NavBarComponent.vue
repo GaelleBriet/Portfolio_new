@@ -161,7 +161,7 @@ onUnmounted(() => {
         <img
           alt="logo"
           src="../assets/icons/GB.svg"
-          class="h-[50px] sm:h-[40px] sm:me-2 text-transparent"
+          class="h-[50px] sm:h-[40px] sm:me-2 dark:text-basic-lightGray"
         />
       </div>
       <div
@@ -199,8 +199,7 @@ onUnmounted(() => {
           :icon="
             isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'
           "
-          color="gray"
-          class="border-s-2 rounded-none items-center flex"
+          class="border-s-2 border-basic-lightGray rounded-none items-center flex dark:text-basic-lightGray text-basic-onyx"
           variant="ghost"
           aria-label="Theme"
           @click="onThemeChange"
