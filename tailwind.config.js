@@ -8,7 +8,7 @@ export default {
     "./app.vue",
     "./error.vue",
   ],
-  darkMode: 'class',
+  darkMode: "class",
   theme: {
     extend: {
       backgroundImage: {
@@ -29,44 +29,56 @@ export default {
       },
       colors: {
         basic: {
-          black: '#0D0D0D',
-          white: '#FFFFFF',
-          onyx: '#181818',
-          darkGray: '#808080',
-          mediumGray: 'rgba(128, 128, 128, 0.5)',
-          lightGray: '#C5C5C5',
-          lightBlue: 'rgba(63,100,234,0.43)',
-          lightRed: 'rgba(233,63,64,0.43)',
-          lightYellow: 'rgba(255,184,0,0.84)',
+          black: "#0D0D0D",
+          white: "#FFFFFF",
+          onyx: "#181818",
+          darkGray: "#808080",
+          mediumGray: "rgba(128, 128, 128, 0.5)",
+          lightGray: "#C5C5C5",
+          lightBlue: "rgba(63,100,234,0.43)",
+          lightRed: "rgba(233,63,64,0.43)",
+          lightYellow: "rgba(255,184,0,0.84)",
         },
         dark: {
-          cardBorder: '#3383737',
-          white_10: 'rgba(255,255,255,0.1)',
-          white_25: 'rgba(255,255,255,0.25)',
-          black_50: 'rgba(21,21,21,0.5)',
+          cardBorder: "#3383737",
+          white_10: "rgba(255,255,255,0.1)",
+          white_25: "rgba(255,255,255,0.25)",
+          black_50: "rgba(21,21,21,0.5)",
+          bg_navbar: "rgba(24,24,29,0.6)",
+          border_navbar: "rgba(39,38,44,0.38)",
         },
         light: {
-        mainBG: '#FBFBFFB',
-        faintWhite: '#F3F3F3',
-        cardBorder: '#EBEBEB',
-        cardBG: '#F6F6F6',
-        black_10: 'rgba(21,21,21,0.1)',
+          mainBG: "#fbfbfb",
+          faintWhite: "#F3F3F3",
+          cardBorder: "#EBEBEB",
+          cardBG: "#F6F6F6",
+          black_10: "rgba(21,21,21,0.1)",
+          bg_navbar: "rgba(24,24,29,0.3)",
+          border_navbar: "rgba(36,38,44,0.3)",
         },
       },
       fontFamily: {
-          sans: ['Inter', 'sans-serif'],
-          script: ['Nanum Pen Script', 'cursive'],
+        sans: ["Inter", "sans-serif"],
+        script: ["Nanum Pen Script", "cursive"],
       },
     },
   },
   plugins: [
-    function ({ addUtilities }) {
+    function ({ addUtilities, theme }) {
       addUtilities({
-        '.bg-lightGradient': {
-          backgroundImage: 'lightGradient',
+        ".nav-light": {
+          backgroundColor: "theme(colors.light.bg_navbar)",
+          border: "1px solid",
+          borderColor: "theme(colors.light.border_navbar)",
+          borderRadius: "12px",
+        },
+        ".nav-dark": {
+          backgroundColor: "theme(colors.dark.bg_navbar)",
+          border: "1px solid",
+          borderColor: "theme(colors.dark.border_navbar)",
+          borderRadius: "12px",
         },
       });
     },
   ],
-}
-
+};
