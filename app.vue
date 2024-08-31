@@ -13,6 +13,7 @@ const onThemeChange = (darkMode: boolean) => {
     >
       <NavBarComponent @define-color-scheme="onThemeChange" />
       <NuxtPage />
+      <FooterComponent />
     </div>
   </div>
 </template>
