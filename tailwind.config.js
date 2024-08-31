@@ -74,9 +74,25 @@ export default {
   plugins: [
     function ({ addUtilities, theme }) {
       addUtilities({
-        ".nav-light": {
+        ".nav-mini-light": {
           backgroundColor: "theme(colors.light.bg_navbar)",
           border: "1px solid",
+          borderColor: "theme(colors.light.border_navbar)",
+          borderRadius: "12px",
+        },
+        ".nav-mini-dark": {
+          backgroundColor: "theme(colors.dark.bg_navbar)",
+          border: "1px solid",
+          borderColor: "theme(colors.dark.border_navbar)",
+          borderRadius: "12px",
+        },
+        ".nav-web": {
+          width: "1024px",
+        },
+        ".nav-light": {
+          backgroundColor: "theme(colors.dark.white_25)",
+          border: "1px solid",
+          textColor: "theme(colors.basic.onyx)",
           borderColor: "theme(colors.light.border_navbar)",
           borderRadius: "12px",
         },
@@ -85,9 +101,6 @@ export default {
           border: "1px solid",
           borderColor: "theme(colors.dark.border_navbar)",
           borderRadius: "12px",
-        },
-        ".nav-web": {
-          width: "1024px",
         },
       });
     },

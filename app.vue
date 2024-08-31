@@ -1,13 +1,10 @@
 <script setup lang="ts">
-const colorMode = useColorMode();
-const isDark = computed({
-  get() {
-    return colorMode.value === "dark";
-  },
-  set() {
-    colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
-  },
-});
+const isDark = ref(false);
+
+const onThemeChange = (darkMode: boolean) => {
+  isDark.value = darkMode;
+  console.log(isDark.value);
+};
 </script>
 
 <template>
@@ -15,23 +12,8 @@ const isDark = computed({
     <div
       :class="['min-h-screen', isDark ? 'bg-darkGradient' : 'bg-lightGradient']"
     >
-      <NavBarComponent />
+      <NavBarComponent @define-color-scheme="onThemeChange" />
       <NuxtPage />
-      <ClientOnly>
-        <UButton
-          :icon="
-            isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'
-          "
-          color="gray"
-          variant="ghost"
-          aria-label="Theme"
-          :label="`Theme actif : ${isDark ? 'dark' : 'light'}`"
-          @click="isDark = !isDark"
-        />
-        <template #fallback>
-          <div class="w-8 h-8" />
-        </template>
-      </ClientOnly>
     </div>
   </div>
 </template>

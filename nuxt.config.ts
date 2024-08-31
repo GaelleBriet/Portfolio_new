@@ -9,9 +9,10 @@ export default defineNuxtConfig({
     // "@nuxt/icon",
     // '@nuxtjs/color-mode'
     "@nuxtjs/tailwindcss",
+    "@nuxtjs/device",
   ],
   colorMode: {
-    preference: "black",
+    preference: "system",
     fallback: "light",
     hid: "nuxt-color-mode-script",
     globalName: "__NUXT_COLOR_MODE__",
