@@ -11,8 +11,7 @@ const isDark = computed({
 </script>
 
 <template>
-  <div class="bg-container">
-    <div class="bg-blur"></div>
+  <div class="">
     <div
       :class="['min-h-screen', isDark ? 'bg-darkGradient' : 'bg-lightGradient']"
     >
@@ -37,15 +36,6 @@ const isDark = computed({
   </div>
 </template>
 <style scoped>
-.bg-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
 .bg-darkGradient {
   position: absolute;
   top: 0;
@@ -144,15 +134,6 @@ const isDark = computed({
     100% 200px,
     100% 200px,
     100% 100%;
-}
-.bg-blur {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px); /* Pour la compatibilité Safari */
 }
 </style>
 

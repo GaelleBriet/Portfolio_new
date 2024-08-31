@@ -61,6 +61,14 @@ export default {
         sans: ["Inter", "sans-serif"],
         script: ["Nanum Pen Script", "cursive"],
       },
+      screens: {
+        sm: "640px",
+        md: "768px",
+        md2: "850px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
     },
   },
   plugins: [
@@ -77,6 +85,9 @@ export default {
           border: "1px solid",
           borderColor: "theme(colors.dark.border_navbar)",
           borderRadius: "12px",
+        },
+        ".nav-web": {
+          width: "1024px",
         },
       });
     },
