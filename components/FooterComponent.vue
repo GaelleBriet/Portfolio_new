@@ -23,7 +23,7 @@ const currentYear = new Date().getFullYear();
 <template>
   <div
     :class="[
-      'fixed bottom-0 left-0 right-0',
+      'bg-transparent',
       isMobile
         ? 'sm:hidden flex flex-col justify-center pb-[60px] my-8 mx-8'
         : 'flex my-10 w-3/4 mx-auto justify-between',

@@ -72,7 +72,7 @@ export default {
     },
   },
   plugins: [
-    function ({ addUtilities, theme }) {
+    function ({ addBase, addUtilities, theme }) {
       addUtilities({
         ".nav-mini-light": {
           backgroundColor: "theme(colors.light.bg_navbar)",

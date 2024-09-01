@@ -19,7 +19,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="">
+  <div class="min-h-screen w-full flex flex-col">
     <div
       :class="['min-h-screen', isDark ? 'bg-darkGradient' : 'bg-lightGradient']"
     >
@@ -41,11 +41,6 @@ onUnmounted(() => {
 </template>
 <style scoped>
 .bg-darkGradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background:
     radial-gradient(
         ellipse at top,
@@ -91,11 +86,6 @@ onUnmounted(() => {
 }
 
 .bg-lightGradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background:
     radial-gradient(
         ellipse at top,
