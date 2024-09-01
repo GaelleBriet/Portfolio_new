@@ -13,7 +13,7 @@ Portfolio réalisé avec l'aide de la maquette ["Geist Portfolio UI Kit"](https:
 ### Built With
 
 * 🖊️ Markdown
-* ![logo-white.svg](../../../../../home/yuki/T%C3%A9l%C3%A9chargements/logo-white.svg)  Nuxt.js
+* ✅ Nuxt.js
 * 🐙 Github
 * 💻 WebStorm
 
