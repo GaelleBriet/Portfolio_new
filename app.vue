@@ -1,9 +1,21 @@
 <script setup lang="ts">
+const { $device } = useNuxtApp();
+const isMobile = ref($device.isMobile);
 const isDark = ref(false);
 
 const onThemeChange = (darkMode: boolean) => {
   isDark.value = darkMode;
 };
+
+onMounted(() => {
+  window.addEventListener("resize", () => {
+    isMobile.value = window.innerWidth < 640;
+  });
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", () => {});
+});
 </script>
 
 <template>
@@ -11,9 +23,12 @@ const onThemeChange = (darkMode: boolean) => {
     <div
       :class="['min-h-screen', isDark ? 'bg-darkGradient' : 'bg-lightGradient']"
     >
-      <NavBarComponent @define-color-scheme="onThemeChange" />
+      <NavBarComponent
+        :is-mobile="isMobile"
+        @define-color-scheme="onThemeChange"
+      />
       <NuxtPage />
-      <FooterComponent />
+      <FooterComponent :is-mobile="isMobile" />
     </div>
   </div>
 </template>
