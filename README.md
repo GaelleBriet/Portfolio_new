@@ -1,4 +1,33 @@
-# Nuxt 3 Minimal Starter
+
+[//]: # ([![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url])
+
+Here's a blank template to get started:
+**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
+`github_username`, `github_repo`, `twitter_handle`, `email`
+
+
+## About The Project
+
+Portfolio réalisé avec l'aide de la maquette ["Geist Portfolio UI Kit"](https://www.figma.com/community/file/1266863403759514317)
+
+### Built With
+
+* 🖊️ Markdown
+* ![logo-white.svg](../../../../../home/yuki/T%C3%A9l%C3%A9chargements/logo-white.svg)  Nuxt.js
+* 🐙 Github
+* 💻 WebStorm
+
+
+## Contact
+
+Gaelle Briet - [Linkedin](https://www.linkedin.com/in/gaelle-briet-666184227/) 
+
+<!--  Project Link: [https://github.com/github_username/github_repo](https://github.com/github_username/github_repo) -->
+
+
+
+
+## Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
