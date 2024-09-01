@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { getCapitalizedText } from "~/services/helpers/TextFormatter";
 
-// const { $device } = useNuxtApp();
-// const isMobile = ref($device.isMobile);
 defineProps<{ isMobile: boolean }>();
 
 const colorMode = useColorMode();
@@ -105,16 +103,6 @@ const socialItems = ref([
 const setActiveItem = (itemName: string) => {
   activeItem.value = itemName;
 };
-
-// onMounted(() => {
-//   window.addEventListener("resize", () => {
-//     isMobile.value = window.innerWidth < 640;
-//   });
-// });
-//
-// onUnmounted(() => {
-//   window.removeEventListener("resize", () => {});
-// });
 </script>
 
 <template>

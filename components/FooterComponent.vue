@@ -96,51 +96,58 @@ const currentYear = new Date().getFullYear();
       </p>
     </div>
   </div>
+
   <div
     v-else
-    class="fixed bottom-0 left-0 right-0 sm:hidden flex flex-col justify-center pb-[60px] my-8 mx-8"
+    class="fixed bottom-0 left-0 right-0 flex my-10 w-3/4 mx-auto justify-between"
   >
-    <div class="mb-10">
-      <p class="mb-8 dark:text-basic-white text-base font-bold">Me retrouver</p>
-      <div
-        v-for="social in socialLinks"
-        class="mb-4 dark:text-basic-lightGray text-basic-onyx"
-      >
-        <NuxtLink
-          :to="social.url"
-          class="dark:text-basic-lightGray text-basic-onyx"
-          >{{ getCapitalizedText(social.name) }}</NuxtLink
-        >
+    <div class="flex flex-col justify-between">
+      <div>
+        <img
+          alt="logo"
+          src="../assets/icons/GB.svg"
+          class="h-[60px] dark:text-basic-lightGray text-basic-onyx"
+        />
+      </div>
+      <div>
+        <p class="text-sm dark:text-dark-white_25 text-dark-black_50">
+          © {{ currentYear
+          }}<span>
+            Made with <span class="text-red-500">❤️</span> by Gaëlle Briet</span
+          >
+        </p>
       </div>
     </div>
 
-    <div class="mb-10">
-      <p class="mb-8 dark:text-basic-white text-base font-bold">Navigation</p>
-      <div
-        v-for="site in siteLinks"
-        class="mb-4 dark:text-basic-lightGray text-basic-onyx"
-      >
-        <NuxtLink
-          :to="site.link"
-          class="dark:text-basic-lightGray text-basic-onyx"
-          >{{ getCapitalizedText(site.name) }}</NuxtLink
+    <div class="flex flex-row flex-grow justify-end">
+      <div class="me-10">
+        <p class="mb-8 dark:text-basic-white text-base font-bold">Navigation</p>
+        <div
+          v-for="site in siteLinks"
+          class="mb-4 dark:text-basic-lightGray text-basic-onyx"
         >
+          <NuxtLink
+            :to="site.link"
+            class="dark:text-basic-lightGray text-basic-onyx"
+            >{{ getCapitalizedText(site.name) }}</NuxtLink
+          >
+        </div>
       </div>
-    </div>
-    <div>
-      <img
-        alt="logo"
-        src="../assets/icons/GB.svg"
-        class="h-[50px] sm:h-[40px] sm:me-2 dark:text-basic-lightGray text-basic-onyx"
-      />
-    </div>
-    <div>
-      <p class="text-sm dark:text-dark-white_25 text-dark-black_50">
-        © {{ currentYear
-        }}<span>
-          Made with <span class="text-red-500">❤️</span> by Gaëlle Briet</span
+      <div class="mx-5">
+        <p class="mb-8 dark:text-basic-white text-base font-bold">
+          Me retrouver
+        </p>
+        <div
+          v-for="social in socialLinks"
+          class="mb-4 dark:text-basic-lightGray text-basic-onyx"
         >
-      </p>
+          <NuxtLink
+            :to="social.url"
+            class="dark:text-basic-lightGray text-basic-onyx"
+            >{{ getCapitalizedText(social.name) }}</NuxtLink
+          >
+        </div>
+      </div>
     </div>
   </div>
 </template>
