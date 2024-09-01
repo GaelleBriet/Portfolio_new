@@ -23,6 +23,13 @@ onUnmounted(() => {
     <div
       :class="['min-h-screen', isDark ? 'bg-darkGradient' : 'bg-lightGradient']"
     >
+      <div v-if="isMobile" class="mt-5 flex justify-center">
+        <img
+          alt="logo"
+          src="~/assets/icons/GB.svg"
+          class="h-[50px] dark:text-basic-lightGray text-basic-onyx"
+        />
+      </div>
       <NavBarComponent
         :is-mobile="isMobile"
         @define-color-scheme="onThemeChange"
