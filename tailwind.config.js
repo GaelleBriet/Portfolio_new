@@ -12,6 +12,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
+        btnGradient: `linear-gradient(180deg, #1A1A1A, #131313)`,
         lightGradient: `
           radial-gradient(ellipse at top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 60%) no-repeat top center,
           radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 60%) no-repeat bottom center,
@@ -49,7 +50,7 @@ export default {
         },
         light: {
           mainBG: "#fbfbfb",
-          faintWhite: "#F3F3F3",
+          faintWhite: "#f3f3f3",
           cardBorder: "#EBEBEB",
           cardBG: "#F6F6F6",
           black_10: "rgba(21,21,21,0.1)",

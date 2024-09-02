@@ -44,39 +44,39 @@ onUnmounted(() => {
   background:
     radial-gradient(
         ellipse at top,
-        rgba(26, 26, 26, 0) 0%,
-        rgb(26, 26, 26, 0.5) 20%,
-        rgb(26, 26, 26) 40%
+        rgba(13, 13, 13, 0) 0%,
+        rgb(13, 13, 13, 0.5) 20%,
+        rgb(13, 13, 13) 40%
       )
       no-repeat top center,
     radial-gradient(
         ellipse at bottom,
         rgba(0, 0, 0, 0) 0%,
-        rgba(26, 26, 26, 0.5) 20%,
-        rgb(26, 26, 26) 40%
+        rgba(13, 13, 13, 0.5) 20%,
+        rgb(13, 13, 13) 40%
       )
       no-repeat bottom center,
     linear-gradient(
         to right,
-        rgb(49, 49, 49, 1) 0%,
+        rgb(13, 13, 13, 1) 0%,
         rgba(63, 100, 233, 0.3) 30%,
         rgba(151, 71, 255, 0.3) 40%,
         rgba(233, 63, 63, 0.3) 60%,
         rgba(255, 184, 0, 0.3) 70%,
-        rgb(49, 49, 49, 1) 100%
+        rgb(13, 13, 13, 1) 100%
       )
       no-repeat top center,
     linear-gradient(
         to right,
-        rgba(49, 49, 49, 1) 0%,
+        rgba(13, 13, 13, 1) 0%,
         rgba(255, 184, 0, 0.3) 30%,
         rgba(233, 63, 63, 0.3) 40%,
         rgba(151, 71, 255, 0.3) 60%,
         rgba(63, 100, 233, 0.3) 70%,
-        rgba(49, 49, 49, 1) 100%
+        rgba(13, 13, 13, 1) 100%
       )
       no-repeat bottom center,
-    #1a1a1a;
+    #0d0d0d;
   background-size:
     100% 200px,
     100% 200px,
