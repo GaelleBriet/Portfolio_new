@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import darkModeImage from "../assets/images/Mode=Dark.png";
-import lightModeImage from "../assets/images/Mode=Light.png";
+import darkModeImage from "assets/images/Mode=Dark.png";
+import lightModeImage from "assets/images/Mode=Light.png";
 
 const colorMode = useColorMode();
 
@@ -33,11 +33,11 @@ const imageSrc = computed(() => {
       <div
         class="flex flex-col md:flex-row justify-center items-center sm:items-start sm:justify-start"
       >
-        <ButtonComponent
+        <UiButton
           :class-name="'w-4/5 px-6 py-3 text-lg mb-4 sm:mr-4 md:w-2/5 bg-btnGradient text-basic-white dark:text-basic-white justify-center'"
           :label="'Voir mon C.V.'"
         />
-        <ButtonComponent
+        <UiButton
           :class-name="
             'w-4/5 px-6 py-3 text-lg mb-4 sm:mr-4 md:w-2/5 bg-light-faintWhite dark:bg-basic-onyx ' +
             'text-basic-onyx dark:text-basic-darkGray justify-center hover:bg-basic-mediumGray dark:hover:bg-basic-mediumGray'

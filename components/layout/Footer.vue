@@ -33,7 +33,7 @@ const currentYear = new Date().getFullYear();
       <div>
         <img
           alt="logo"
-          src="../assets/icons/GB.svg"
+          src="../../assets/icons/GB.svg"
           :class="[
             isMobile ? 'h-[50px] ' : 'h-[60px]',
             'dark:text-basic-lightGray text-basic-onyx',

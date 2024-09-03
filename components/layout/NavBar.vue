@@ -150,7 +150,7 @@ const setActiveItem = (itemName: string) => {
       <div class="flex justify-center items-center">
         <img
           alt="logo"
-          src="../assets/icons/GB.svg"
+          src="../../assets/icons/GB.svg"
           class="h-[50px] sm:h-[40px] sm:me-2 dark:text-basic-lightGray"
         />
       </div>

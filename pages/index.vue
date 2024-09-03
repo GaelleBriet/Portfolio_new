@@ -1,9 +1,6 @@
-<script setup lang="ts">
-import WorkView from "~/views/WorkView.vue";
-import HeroView from "~/views/HeroView.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <HeroView />
-  <WorkView />
+  <SectionsHero />
+  <SectionsWork />
 </template>

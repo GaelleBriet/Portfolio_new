@@ -41,7 +41,7 @@ export default {
           lightYellow: "rgba(255,184,0,0.84)",
         },
         dark: {
-          cardBorder: "#3383737",
+          cardBorder: "#383737",
           white_10: "rgba(255,255,255,0.1)",
           white_25: "rgba(255,255,255,0.25)",
           black_50: "rgba(21,21,21,0.5)",

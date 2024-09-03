@@ -30,12 +30,12 @@ onUnmounted(() => {
           class="h-[50px] dark:text-basic-lightGray text-basic-onyx"
         />
       </div>
-      <NavBarComponent
+      <LayoutNavBar
         :is-mobile="isMobile"
         @define-color-scheme="onThemeChange"
       />
       <NuxtPage />
-      <FooterComponent :is-mobile="isMobile" />
+      <LayoutFooter :is-mobile="isMobile" />
     </div>
   </div>
 </template>

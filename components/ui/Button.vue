@@ -3,6 +3,7 @@ const props = defineProps<{
   isMobile?: boolean;
   className?: string;
   label?: string;
+  icon?: string;
 }>();
 </script>
 
